@@ -21,15 +21,6 @@ Paths for Frodo -     Blue: Path of least cost/Red: Shortest path via roads.
 ![FrodoRoutes(1)](https://github.com/Lorenzovagliano/GeoMiddleEarth/assets/111889654/b2411aa4-142c-4a11-86bb-2f7f92c1e130)
 
 ---
-
-### **Process**
-Some alterations were required in the data. The roads, initially classified as "MultiLineString," needed to be converted into "LineString" using the "explode" function, separating the lines at their intersections. Subsequently, these lines had to be reassembled, accomplished through the "Split with lines" function.
-<p>
-Additionally, the contour lines needed to be transformed into a raster representing a grid where each cell contains an elevation value. This conversion was executed using the GRASS plugin in QGIS. This was necessary as the previously collected elevation raster didn't suit one of our analyses.
-
-In order to calculate the paths, the "Shortest Path" function was used between two points using our road layer. The other utilized the "Least Cost Path" plugin between two points based on our elevation raster.
-  
----
   
 ### **Conclusions**
 Ultimately, the paths of least cost closely mirrored the routes actually taken by the characters, which can be referenced on the interactive map available on the [Lotrproject](http://lotrproject.com/map/) website.
